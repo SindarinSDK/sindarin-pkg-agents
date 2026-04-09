@@ -72,16 +72,21 @@ Read **only the topic(s) relevant to the current task** — do not load them all
 
 | Topic | File | When to read |
 |-------|------|--------------|
-| Types & conversions | `./.sn/sindarin-pkg-agents/docs/types.md` | Primitives (`int`, `int32`, `uint`, `uint32`, `byte`, …), type inference, explicit `.toX()` conversions |
-| Functions & lambdas | `./.sn/sindarin-pkg-agents/docs/functions.md` | Functions, closures, callbacks, `native fn`, variadic natives |
+| Program structure | `./.sn/sindarin-pkg-agents/docs/program-structure.md` | `main()`, comments, globals, forward declarations, `return` |
+| Types & conversions | `./.sn/sindarin-pkg-agents/docs/types.md` | Primitives, `nil`, type inference, explicit `.toX()` conversions |
+| Operators | `./.sn/sindarin-pkg-agents/docs/operators.md` | Arithmetic, comparison, logical, `+=`/`-=`/`*=`, `++`/`--`, unary, special |
+| Functions & lambdas | `./.sn/sindarin-pkg-agents/docs/functions.md` | Functions, lambdas, recursion, `native fn`, variadic natives |
+| Closures | `./.sn/sindarin-pkg-agents/docs/closures.md` | Capture semantics, mutation, struct fields, threads |
 | Structs | `./.sn/sindarin-pkg-agents/docs/structs.md` | Fields, methods, static methods, operator overloading, packed structs, handle fields |
-| Memory | `./.sn/sindarin-pkg-agents/docs/memory.md` | `as ref` / `as val`, `copyOf`, `addressOf` / `valueOf`, `using` / `dispose`, return ownership |
+| Memory | `./.sn/sindarin-pkg-agents/docs/memory.md` | `as ref` / `as val`, pointer restrictions, `copyOf`, `using` / `dispose`, return ownership |
 | Control flow | `./.sn/sindarin-pkg-agents/docs/control-flow.md` | if/else, `match` (statement vs expression, multi-value arms), for, while, break/continue |
 | Strings & arrays | `./.sn/sindarin-pkg-agents/docs/strings-and-arrays.md` | Interpolation, multi-line `|` / `$|`, ranges, slicing, spread `...`, byte encodings |
 | Generics & interfaces | `./.sn/sindarin-pkg-agents/docs/generics.md` | Generic structs/functions, `interface`, `Self`, constraints (`T: A & B`), iterators, operators |
-| Serialization | `./.sn/sindarin-pkg-agents/docs/serialization.md` | `@serializable`, encode/decode |
+| Serialization | `./.sn/sindarin-pkg-agents/docs/serialization.md` | `@serializable`, `@alias` field mapping, encode/decode |
 | Threading | `./.sn/sindarin-pkg-agents/docs/threading.md` | `sync var`, `lock` block, thread spawn (`&`), join (`!`), detach (`~`), fire-and-forget |
 | Native C interop | `./.sn/sindarin-pkg-agents/docs/native-interop.md` | `@source` / `@alias` / `@include` / `@link` (and `#pragma` forms), `.sn.c`, C type mapping |
-| Packages & tooling | `./.sn/sindarin-pkg-agents/docs/packages.md` | `sn.yaml`, imports, CLI, built-in functions |
+| Imports & multi-file | `./.sn/sindarin-pkg-agents/docs/imports.md` | `import`, `import as`, diamond deps, transitive protection, collision handling |
+| Packages & tooling | `./.sn/sindarin-pkg-agents/docs/packages.md` | `sn.yaml`, CLI, built-in functions, project layout |
+| Common errors | `./.sn/sindarin-pkg-agents/docs/common-errors.md` | Compile error quick-reference: struct, pointer, thread, import, interface errors |
 
 **Critical pitfall:** Sindarin has **no `as` cast operator** — `as` is only for memory qualifiers (`as ref` / `as val`). All type conversions are explicit method calls (`x.toDouble()`, `s.toInt()`, `bytes.toString()`, …). See `./.sn/sindarin-pkg-agents/docs/types.md`.

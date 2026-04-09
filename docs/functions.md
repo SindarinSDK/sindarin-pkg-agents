@@ -37,7 +37,11 @@ var greet: fn(): str = fn(): str => "hello"
 var result: int = add(3, 4)
 ```
 
-Lambdas capture variables from their enclosing scope.
+Lambdas capture variables from their enclosing scope by reference. See `closures.md` for capture semantics, mutation, and struct field behavior.
+
+## Recursion
+
+Recursion works naturally — a function can call itself or other functions that call it back (mutual recursion). The compiler resolves all top-level functions before codegen, so call order doesn't matter.
 
 ## Native Functions
 

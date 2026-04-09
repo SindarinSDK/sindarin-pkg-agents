@@ -20,6 +20,10 @@ fn getData(): Config as val            # return by value
 
 **Rule**: `as ref` params require an lvalue at the call site (a variable or field, not a literal or expression).
 
+## Pointer Restrictions
+
+Pointer types (`*T`), `addressOf()`, and pointer returns are **only allowed in `native fn`** declarations. Regular Sindarin functions cannot accept or return raw pointers. Use `as ref` for indirection in non-native code.
+
 ## copyOf / addressOf / valueOf
 
 ```sindarin

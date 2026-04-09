@@ -46,6 +46,10 @@ var x = 42              # inferred as int
 var s = "hello"         # inferred as str
 ```
 
+## nil
+
+`nil` represents the absence of a value. It is valid for `as ref` types and pointers. Assigning `nil` to a value type is a compile error.
+
 ## Type Conversions
 
 All type conversions are **explicit method calls** using dot notation. There is no `as` cast operator — `as` is only for memory qualifiers (`as ref` / `as val`).

@@ -16,6 +16,21 @@ struct Person =>
     tags: str[]
 ```
 
+## Field Aliasing
+
+Use `@alias` on fields to map to different JSON keys:
+
+```sindarin
+@serializable
+struct ApiResponse =>
+    @alias "status_code"
+    statusCode: int
+    @alias "error_message"
+    errorMessage: str
+```
+
+Encodes as `{"status_code":200,"error_message":""}` instead of using the Sindarin field names.
+
 ## Generated Methods
 
 ```sindarin

@@ -62,7 +62,7 @@ Dependencies install to `.sn/<pkg-name>/` in the project root.
 |----------|-------------|
 | `print(s)` | Print string (no newline) |
 | `println(s)` | Print string with newline |
-| `assert(cond, msg)` | Assert condition, abort with message |
+| `assert(cond, msg)` | Assert condition; aborts program with message if false |
 | `len(arr)` | Array length |
 | `typeOf(expr)` | Type name as string (parentheses required) |
 | `sizeOf(type)` | Size of type in bytes |
