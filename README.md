@@ -5,7 +5,7 @@ AI-agent primer for programming in [Sindarin](https://github.com/SindarinSDK). I
 ## Install
 
 ```bash
-sn --install git@github.com:SindarinSDK/sindarin-pkg-agents.git
+sn --install https://github.com/SindarinSDK/sindarin-pkg-agents.git
 ```
 
 This package will then live at `./.sn/sindarin-pkg-agents/`. All paths below are relative to the project root (where `sn.yaml` lives), so an agent can follow them directly.
