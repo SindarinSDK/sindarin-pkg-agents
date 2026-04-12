@@ -90,3 +90,7 @@ Read **only the topic(s) relevant to the current task** — do not load them all
 | Common errors | `./.sn/sindarin-pkg-agents/docs/common-errors.md` | Compile error quick-reference: struct, pointer, thread, import, interface errors |
 
 **Critical pitfall:** Sindarin has **no `as` cast operator** — `as` is only for memory qualifiers (`as ref` / `as val`). All type conversions are explicit method calls (`x.toDouble()`, `s.toInt()`, `bytes.toString()`, …). See `./.sn/sindarin-pkg-agents/docs/types.md`.
+
+## License
+
+[MIT License](LICENSE)
